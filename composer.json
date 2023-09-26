@@ -1,0 +1,21 @@
+{
+    "name": "vankevych/king-software-sdk",
+    "description": "This is a package that allows to call the API of King Software",
+    "authors": [
+        {
+            "name": "Petro Vankevych",
+            "email": "petro@swipex.ua"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "KingSoftWare\\": "src/"
+        }
+    }
+}

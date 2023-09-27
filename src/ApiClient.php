@@ -3,6 +3,7 @@
 namespace KingSoftWare;
 
 use GuzzleHttp\Client;
+use KingSoftWare\Webshops\Order;
 use KingSoftWare\Webshops\Orders;
 
 class ApiClient
@@ -17,5 +18,10 @@ class ApiClient
     public function orders(): Orders
     {
         return new Orders($this->httpClient, self::BASE_URL);
+    }
+
+    public function order(): Order
+    {
+        return  new Order($this->httpClient, self::BASE_URL);
     }
 }

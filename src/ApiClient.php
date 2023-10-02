@@ -3,6 +3,7 @@
 namespace KingSoftWare;
 
 use GuzzleHttp\Client;
+use KingSoftWare\Webshops\Debtor;
 use KingSoftWare\Webshops\Order;
 use KingSoftWare\Webshops\Orders;
 
@@ -23,5 +24,10 @@ class ApiClient
     public function order(): Order
     {
         return  new Order($this->httpClient, self::BASE_URL);
+    }
+
+    public function debtor(): Debtor
+    {
+        return  new Debtor($this->httpClient, self::BASE_URL);
     }
 }

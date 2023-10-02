@@ -4,12 +4,10 @@ namespace KingSoftWare\Webshops;
 
 use GuzzleHttp\Client;
 
-class Orders
+class Debtor
 {
     private Client $client;
     private string $baseUrl;
-
-
 
     public function __construct($client, $baseUrl)
     {
@@ -17,10 +15,11 @@ class Orders
         $this->baseUrl = $baseUrl;
     }
 
-    public function getOrders(string $adminCode): string
+    public function getDebtor(string $adminCode,string $debtorNumber): string
     {
-        $response = $this->client->get($this->baseUrl . '/webshop/' . $adminCode . '/' . 'Orders?Skip=0&Take=0');
+        $response = $this->client->get($this->baseUrl . '/webshop/' . $adminCode . '/debiteuren/' . $debtorNumber);
 
         return $response->getBody()->getContents();
     }
+
 }

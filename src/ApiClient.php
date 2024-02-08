@@ -7,6 +7,7 @@ use KingSoftWare\Environment\Administration;
 use KingSoftWare\Webshops\Debtor;
 use KingSoftWare\Webshops\Order;
 use KingSoftWare\Webshops\Orders;
+use KingSoftWare\Webshops\OrdersFromDate;
 
 class ApiClient
 {
@@ -35,5 +36,10 @@ class ApiClient
     public function administration(): Administration
     {
         return new Administration($this->httpClient);
+    }
+
+    public function ordersFromDate(): OrdersFromDate
+    {
+        return new OrdersFromDate($this->httpClient, self::BASE_URL);
     }
 }

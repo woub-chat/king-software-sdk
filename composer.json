@@ -1,12 +1,6 @@
 {
-    "name": "vankevych/king-software-sdk",
+    "name": "woub-chat/king-software-sdk",
     "description": "This is a package that allows to call the API of King Software",
-    "authors": [
-        {
-            "name": "Petro Vankevych",
-            "email": "petro@swipex.ua"
-        }
-    ],
     "minimum-stability": "stable",
     "require": {
         "php": "^8.0",
